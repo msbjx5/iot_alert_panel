@@ -1,0 +1,12 @@
+<%= link_to 'Voltar', root_path %>
+
+<%= form_with model: @device, local: true do |f|%>
+  <%= f.label :name, 'Nome' %>
+  <%= f.text_field :name %>
+  <%= f.label :mac, 'Endereço MAC' %>
+  <%= f.text_field :mac %>
+  <%= f.label :cel, 'Celular' %>
+  <%= f.text_field :cel %>
+
+  <%= f.submit 'Criar' %>
+<% end %>
