@@ -1,11 +1,11 @@
 class DevicesController < ApplicationController
+  before_action :find_device, only: [:show, :destroy]
+
   def index
     @devices = Device.all
   end
 
-  def show
-    @device = Device.find(params[:id])
-  end
+  def show; end
 
   def new
     @device = Device.new
@@ -14,6 +14,7 @@ class DevicesController < ApplicationController
   def create
     @device = Device.new(device_params)
     if @device.save
+      flash[:notice] = 'Device criado com sucesso!'
       redirect_to @device
     else
       flash[:error] = 'Confira os dados e tente novamente.'
@@ -21,7 +22,20 @@ class DevicesController < ApplicationController
     end
   end
 
+  def destroy
+    if @device.destroy
+      flash[:notice] = 'Device apagado com sucesso!'
+    else
+      flash[:error] = 'Erro ao apagar, tente novamente.'
+    end
+    redirect_to root_path
+  end
+
   private
+
+  def find_device
+    @device = Device.find(params[:id])
+  end
 
   def device_params
     params.require(:device).permit(:name, :mac, :cel)

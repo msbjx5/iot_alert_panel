@@ -10,3 +10,5 @@
 
 <h3>Celular</h3>
 <p><%= @device.cel %></p>
+
+<%= link_to 'Apagar', device_path, method: :delete, data: { confirm: "Tem certeza?" } %>
