@@ -21,7 +21,7 @@ describe 'User visit pages' do
     fill_in 'Nome', with: device.name
     fill_in 'Endereço MAC', with: device.mac
     fill_in 'Celular', with: device.cel
-    click_on 'Criar'
+    click_on 'Salvar'
 
     expect(page).to have_content(device.name)
     expect(page).to have_content(device.mac)
