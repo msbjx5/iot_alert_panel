@@ -1,5 +1,5 @@
 class DevicesController < ApplicationController
-  before_action :find_device, only: [:show, :destroy]
+  before_action :find_device, only: [:show, :destroy, :edit, :update]
 
   def index
     @devices = Device.all
@@ -29,6 +29,16 @@ class DevicesController < ApplicationController
       flash[:error] = 'Erro ao apagar, tente novamente.'
     end
     redirect_to root_path
+  end
+
+  def edit; end
+
+  def update
+    if @device.update(device_params)
+      redirect_to @device
+    else
+      render 'edit'
+    end
   end
 
   private

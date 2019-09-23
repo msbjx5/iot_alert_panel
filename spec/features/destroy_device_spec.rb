@@ -1,5 +1,4 @@
 require 'rails_helper'
-Capybara.current_driver = :selenium
 
 describe 'User deletes device' do
   xit 'Successfully' do
