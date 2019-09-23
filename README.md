@@ -28,9 +28,7 @@ O servidor web estará disponível na porta `80`.
 
 ### API
 
-Por enquanto teremos apenas o endpoint de consulta, na qual será fornecido um mac,
+Por enquanto teremos apenas o endpoint de consulta, na qual será fornecido um MAC,
 e deve ser retornado o nome e telefone no cadastro. e.g:
 
-`payload = { mac: ffffffffffff}`
-
-`post 'http://localhost/api/v1/search', params: payload`
+`get 'http://localhost/api/v1/search/<MAC_ADDRESS>`
