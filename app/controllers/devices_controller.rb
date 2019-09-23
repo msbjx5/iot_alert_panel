@@ -1,5 +1,7 @@
 class DevicesController < ApplicationController
-  def index; end
+  def index
+    @devices = Device.all
+  end
 
   def show
     @device = Device.find(params[:id])
@@ -10,8 +12,8 @@ class DevicesController < ApplicationController
   end
 
   def create
-  @device = Device.new(device_params)
-  if @device.save
+    @device = Device.new(device_params)
+    if @device.save
       redirect_to @device
     else
       flash[:error] = 'Confira os dados e tente novamente.'
