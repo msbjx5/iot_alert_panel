@@ -10,12 +10,12 @@ default: &default
 
 development:
   <<: *default
-  database: connecti_panel_development
+  database: iot_panel_development
 
 test:
   <<: *default
-  database: connecti_panel_test
+  database: iot_panel_test
 
 production:
   <<: *default
-  database: connecti_panel_production
+  database: iot_panel_production
