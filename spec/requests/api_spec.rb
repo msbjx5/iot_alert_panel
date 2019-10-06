@@ -23,7 +23,8 @@ describe 'Api return search' do
       expect(resp['cel']).to eq(device.cel)
     end
 
-    it 'sends an alert' do
+    # habilitar esse teste com cuidado, ele enviará um sms
+    xit 'sends an alert' do
       post '/api/v1/alert', params: { mac: device.mac }
 
       expect(response).to have_http_status(:ok)
