@@ -1,0 +1,11 @@
+datasources:
+ - apiVersion: 1
+   org_id: 1
+   is_default: true
+   name: 'influx'
+   type: 'influxdb'
+   access: proxy
+   url: 'http://influx:8086'
+   database: 'metrics'
+   user: admin
+   password: password

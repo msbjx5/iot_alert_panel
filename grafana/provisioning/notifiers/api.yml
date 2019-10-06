@@ -1,0 +1,14 @@
+notifiers:
+  - name: api
+    type: webhook
+    uid: api
+    org_id: 1
+    is_default: false
+    send_reminder: false
+    frequency: 5s
+    disable_resolve_message: false
+    settings:
+      uploadImage: false
+      url: 'http://web/alerts'
+      username: ''
+      password: ''
