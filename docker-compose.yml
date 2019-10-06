@@ -3,6 +3,17 @@ services:
   postgres:
     image: postgres:12-alpine
 
+  influx:
+    image: influxdb:1.5.4
+    environment:
+      - INFLUXDB_INIT_PWD="password"
+      - PRE_CREATE_DB="metrics"
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+    volumes:
+     - influx:/data
+
   web:
     build: .
     restart: always
@@ -13,3 +24,19 @@ services:
     command: bash -c "bin/setup && rails s -b 0.0.0.0 -p 3000"
     depends_on:
       - postgres
+
+  grafana:
+    build: grafana/.
+    ports:
+      - 8080:3000
+    volumes:
+      - ./grafana/provisioning/:/etc/grafana/provisioning
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    depends_on:
+      - influx
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+
+volumes:
+  influx:
