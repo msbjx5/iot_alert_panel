@@ -21,5 +21,3 @@
 /config/master.key
 
 /config/twilio.yml
-
-/grafana/dashboards/*
