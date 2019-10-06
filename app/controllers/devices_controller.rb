@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class DevicesController < ApplicationController
-  before_action :find_device, only: [:show, :destroy, :edit, :update]
+  before_action :find_device, only: %i[show destroy edit update]
 
   def index
     @devices = Device.all
