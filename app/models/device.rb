@@ -4,8 +4,7 @@ class Device < ApplicationRecord
   validates :name, :mac, :cel, presence: true
 
   def send_alert
-    client = Twilio::REST::Client.new
-    client.messages.create({
+    Twilio::REST::Client.new.messages.create({
       from: TWILIO['twilio_phone_number'],
       to: cel,
       body: "ALERTA #{name.upcase}: Alguém no carro!"
