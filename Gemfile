@@ -16,6 +16,7 @@ gem 'twilio-ruby'
 
 group :test do
   gem "capybara"
+  gem 'simplecov', require: false
 end
 
 group :development do
