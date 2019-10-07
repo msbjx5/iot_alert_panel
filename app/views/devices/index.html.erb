@@ -18,7 +18,7 @@
           <td><%= device.name %></td>
           <td><%= device.mac %></td>
           <td><%= device.cel %></td>
-          <td><%= link_to raw('&#128065;'), device_path(device.id) %></td>
+          <td><%= link_to raw('&#128065;'), device_path(device.id), id: device.id %></td>
         </tr>
       <% end %>
     </tbody>
