@@ -1,10 +1,17 @@
 <%= form_with model: @device, local: true do |f|%>
-  <%= f.label :name, 'Nome' %>
-  <%= f.text_field :name %>
-  <%= f.label :mac, 'Endereço MAC' %>
-  <%= f.text_field :mac %>
-  <%= f.label :cel, 'Celular' %>
-  <%= f.text_field :cel %>
-
-  <%= f.submit 'Salvar' %>
+  <div class="ml-5 mr-5">
+    <div class="form-group">
+      <%= f.label :name, 'Nome' %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :mac, 'Endereço MAC' %>
+      <%= f.text_field :mac, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :cel, 'Celular' %>
+      <%= f.text_field :cel, class: 'form-control' %>
+    </div>
+  </div>
+  <%= f.submit 'Salvar', class: 'ml-5 btn btn-success' %>
 <% end %>
