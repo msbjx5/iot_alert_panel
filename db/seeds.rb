@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Device.create(name: 'Ze', mac: 'a1b2c3d4f5g6', cel: '+5511966666666')
