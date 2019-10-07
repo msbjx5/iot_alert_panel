@@ -2,21 +2,25 @@
 
 <br><hr><br>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>MAC</th>
-      <th>Celular</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @devices.each do |device| %>
+<div class="ml-5">
+  <table border="1">
+    <thead>
       <tr>
-        <td><%= link_to device.name, device_path(device.id) %></td>
-        <td><%= device.mac %></td>
-        <td><%= device.cel %></td>
+        <th>Nome</th>
+        <th>MAC</th>
+        <th>Celular</th>
+        <th>Ver mais</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @devices.each do |device| %>
+        <tr>
+          <td><%= device.name %></td>
+          <td><%= device.mac %></td>
+          <td><%= device.cel %></td>
+          <td><%= link_to raw('&#128065;'), device_path(device.id) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

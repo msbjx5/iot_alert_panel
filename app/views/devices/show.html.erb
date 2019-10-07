@@ -1,15 +1,19 @@
-<%= link_to 'Voltar', root_path %>
+<div class="ml-5">
+  <h1>Device</h1>
 
-<h1>Device</h1>
+  <h3>Nome</h3>
+  <p><%= @device.name %></p>
 
-<h3>Nome</h3>
-<p><%= @device.name %></p>
+  <h3>Endereço MAC</h3>
+  <p><%= @device.mac %></p>
 
-<h3>Endereço MAC</h3>
-<p><%= @device.mac %></p>
+  <h3>Celular</h3>
+  <p><%= @device.cel %></p>
 
-<h3>Celular</h3>
-<p><%= @device.cel %></p>
-
-<%= link_to 'Editar', edit_device_path(@device.id) %>
-<%= link_to 'Apagar', device_path, method: :delete, data: { confirm: "Tem certeza?" } %>
+  <hr>
+  <%= link_to 'Editar', edit_device_path(@device.id), class: 'btn btn-info' %>
+  <br>
+  <%= link_to 'Apagar', device_path, method: :delete, data: { confirm: "Tem certeza?" }, class: 'btn btn-danger mt-2' %>
+  <br>
+  <%= link_to 'Voltar', root_path, class: 'btn btn-secondary mt-2' %>
+</div>
