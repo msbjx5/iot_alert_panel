@@ -18,7 +18,7 @@ describe 'User visit pages' do
                         cel: '11987654321')
 
     visit root_path
-    click_on 'Cadastrar device'
+    click_on 'Cadastro'
 
     fill_in 'Nome', with: device.name
     fill_in 'Endereço MAC', with: device.mac

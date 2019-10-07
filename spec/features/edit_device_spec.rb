@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# encoding: unicode
 
 require 'rails_helper'
 
@@ -8,7 +9,7 @@ describe 'User visit pages' do
                            cel: '11987654321')
 
     visit root_path
-    click_on device.name
+    click_on device.id
     click_on 'Editar'
 
     fill_in 'Nome', with: 'foo'
