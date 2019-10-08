@@ -26,7 +26,7 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=admin
 
   mosquitto:
-    image: eclipse-mosquitto:1.6.7
+    build: mosquitto/.
     ports:
       - "9001:9001"
       - "1883:1883"
