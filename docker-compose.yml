@@ -24,6 +24,8 @@ services:
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - influx
 
   mosquitto:
     build: mosquitto/.
