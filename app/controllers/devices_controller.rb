@@ -41,7 +41,7 @@ class DevicesController < ApplicationController
   def edit; end
 
   def update
-    if @device.update(device_params)
+    if update_dashboard && @device.update(device_params)
       redirect_to @device
     else
       render 'edit'
@@ -56,5 +56,9 @@ class DevicesController < ApplicationController
 
   def device_params
     params.require(:device).permit(:name, :mac, :cel)
+  end
+
+  def update_dashboard
+    Grafana.update(@device.mac, device_params[:mac])
   end
 end
