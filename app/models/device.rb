@@ -16,8 +16,4 @@ class Device < ApplicationRecord
   def create_dashboard
     Grafana.create(mac)
   end
-
-  def update_dashboard
-    Grafana.update(mac)
-  end
 end

@@ -12,10 +12,10 @@ class Grafana
     path = File.join(Rails.root, 'grafana', 'dashboards', "#{old_mac}.json")
     file = File.read(path)
     file = file.gsub(old_mac, new_mac)
-    # todo escrever arquivo
     File.open(File.join(path), 'r+') do |f|
       f.write(file)
     end
-    #todo mudar nome do arquivo
+    new_path = File.join(Rails.root, 'grafana', 'dashboards')
+    system("mv #{path} #{new_path}/#{new_mac}.json")
   end
 end

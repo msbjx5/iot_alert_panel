@@ -9,6 +9,6 @@ notifiers:
     disable_resolve_message: false
     settings:
       uploadImage: false
-      url: 'http://web/alerts'
+      url: 'http://web/api/v1/alerts'
       username: ''
       password: ''
