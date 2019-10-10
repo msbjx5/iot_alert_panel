@@ -12,7 +12,7 @@ def on_message(client, userdata, msg):
     {
         "measurement": "metrics",
         "tags": {
-            "host": "esp32",
+            "host": "metrics",
         },
         "fields": {
             "value": str(msg.payload)
