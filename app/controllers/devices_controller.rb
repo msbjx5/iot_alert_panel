@@ -25,15 +25,15 @@ class DevicesController < ApplicationController
   end
 
   def destroy
+    file = Rails.root.join('grafana', 'dashboards', "#{@device.mac}.json")
     if @device.destroy
-      file = Rails.root.join('grafana', 'dashboards', "#{@device.mac}.json")
       if system("rm #{file}")
         flash[:notice] = 'Device apagado com sucesso!'
       else
         flash[:error] = 'Erro ao apagar dashboard.'
       end
     else
-      flash[:error] = 'Erro ao apagar, tente novamente.'
+      flash[:error] = 'Erro ao apagar device, tente novamente.'
     end
     redirect_to root_path
   end
