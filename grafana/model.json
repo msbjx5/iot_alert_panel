@@ -15,7 +15,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1570388713020,
   "links": [],
   "panels": [
     {
@@ -61,11 +60,12 @@
           }
         ]
       },
-      "aliasColors": {},
+      "aliasColors": {
+        "not_present": "red"
+      },
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "influx",
       "description": "",
       "fill": 1,
       "gridPos": {
@@ -109,7 +109,7 @@
             },
             {
               "params": [
-                "linear"
+                "none"
               ],
               "type": "fill"
             }
@@ -125,7 +125,7 @@
             [
               {
                 "params": [
-                  "co2"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -139,13 +139,13 @@
             {
               "key": "mac",
               "operator": "=",
-              "value": "\"xxxxxxxxxxxx\""
+              "value": "xxxxxxxxxxxx"
             },
             {
               "condition": "AND",
               "key": "present",
               "operator": "=",
-              "value": "\"1\""
+              "value": "1"
             }
           ]
         },
@@ -174,7 +174,7 @@
             [
               {
                 "params": [
-                  "co2"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -188,13 +188,13 @@
             {
               "key": "mac",
               "operator": "=",
-              "value": "\"xxxxxxxxxxxx\""
+              "value": "xxxxxxxxxxxx"
             },
             {
               "condition": "AND",
               "key": "present",
               "operator": "=",
-              "value": "\"0\""
+              "value": "0"
             }
           ]
         }
@@ -258,8 +258,8 @@
     "list": []
   },
   "time": {
-    "from": "2019-10-01T03:48:48.813Z",
-    "to": "2019-10-01T04:48:28.474Z"
+    "from": "2019-10-11T04:35:26.768Z",
+    "to": "2019-10-11T04:42:29.768Z"
   },
   "timepicker": {
     "refresh_intervals": [
