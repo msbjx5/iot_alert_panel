@@ -9,6 +9,7 @@ notifiers:
     disable_resolve_message: false
     settings:
       uploadImage: false
+      access: proxy
       url: 'http://web/api/v1/alerts'
       username: ''
       password: ''
