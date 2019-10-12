@@ -33,27 +33,27 @@
             "query": {
               "params": [
                 "B",
-                "5m",
+                "10s",
                 "now"
               ]
             },
             "reducer": {
               "params": [],
-              "type": "count"
+              "type": "avg"
             },
             "type": "query"
           }
         ],
-        "executionErrorState": "keep_state",
+        "executionErrorState": "alerting",
         "for": "5m",
         "frequency": "1m",
         "handler": 1,
-        "message": "xxxxxxxxxxxx",
+        "message": "3c71bfffa9c4",
         "name": "api",
-        "noDataState": "ok",
+        "noDataState": "keep_state",
         "notifications": [
           {
-            "uid": "xxxxxxxxxxxx"
+            "uid": "3c71bfffa9c4"
           },
           {
             "uid": "api"
@@ -63,7 +63,7 @@
       "aliasColors": {
         "not_present": "red"
       },
-      "bars": false,
+      "bars": true,
       "dashLength": 10,
       "dashes": false,
       "description": "",
@@ -118,7 +118,7 @@
           "measurement": "metrics",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT count(\"co2\") FROM \"metrics\" WHERE (\"mac\" = '\"xxxxxxxxxxxx\"' AND \"present\" = '\"1\"') AND $timeFilter GROUP BY time($__interval) fill(linear)",
+          "query": "SELECT count(\"co2\") FROM \"metrics\" WHERE (\"mac\" = '\"3c71bfffa9c4\"' AND \"present\" = '\"1\"') AND $timeFilter GROUP BY time($__interval) fill(linear)",
           "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
@@ -140,7 +140,7 @@
             {
               "key": "mac",
               "operator": "=",
-              "value": "xxxxxxxxxxxx"
+              "value": "3c71bfffa9c4"
             },
             {
               "condition": "AND",
@@ -190,7 +190,7 @@
             {
               "key": "mac",
               "operator": "=",
-              "value": "xxxxxxxxxxxx"
+              "value": "3c71bfffa9c4"
             },
             {
               "condition": "AND",
@@ -213,7 +213,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Device xxxxxxxxxxxx",
+      "title": "Device 3c71bfffa9c4",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -288,7 +288,7 @@
     ]
   },
   "timezone": "",
-  "title": "xxxxxxxxxxxx",
-  "uid": "xxxxxxxxxxxx",
-  "version": 11
+  "title": "3c71bfffa9c4",
+  "uid": "3c71bfffa9c4",
+  "version": 1
 }
