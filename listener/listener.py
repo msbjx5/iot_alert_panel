@@ -13,11 +13,11 @@ def on_message(client, userdata, msg):
     {
         "measurement": "metrics",
         "tags": {
-            "mac_address": str(payload['mac_address']),
-            "present": str(payload['present']),
+            "mac": payload['mac_address'],
+            "present": payload['present'],
         },
         "fields": {
-            "co2": str(payload['co2'])
+            "value": payload['co2']
         }
     }
     ]
