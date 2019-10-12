@@ -17,7 +17,7 @@ def on_message(client, userdata, msg):
             "present": payload['present'],
         },
         "fields": {
-            "value": payload['co2']
+            "value": int(payload['co2'])
         }
     }
     ]
