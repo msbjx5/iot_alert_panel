@@ -26,5 +26,6 @@ class Api::V1::DevicesController < ActionController::API
 
   def find_device
     @device = Device.find_by(mac: params[:mac])
+    @device ||= Device.find_by(mac: params['message'])
   end
 end
