@@ -39,18 +39,18 @@
             },
             "reducer": {
               "params": [],
-              "type": "avg"
+              "type": "sum"
             },
             "type": "query"
           }
         ],
-        "executionErrorState": "alerting",
-        "for": "5m",
+        "executionErrorState": "keep_state",
+        "for": "0m",
         "frequency": "1m",
         "handler": 1,
         "message": "3c71bfffa9c4",
         "name": "api",
-        "noDataState": "keep_state",
+        "noDataState": "ok",
         "notifications": [
           {
             "uid": "3c71bfffa9c4"
@@ -63,7 +63,7 @@
       "aliasColors": {
         "not_present": "red"
       },
-      "bars": true,
+      "bars": false,
       "dashLength": 10,
       "dashes": false,
       "description": "",
