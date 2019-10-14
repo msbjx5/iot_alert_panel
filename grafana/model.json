@@ -48,12 +48,12 @@
         "for": "0m",
         "frequency": "1m",
         "handler": 1,
-        "message": "3c71bfffa9c4",
+        "message": "xxxxxxxxxxxx",
         "name": "api",
         "noDataState": "keep_state",
         "notifications": [
           {
-            "uid": "3c71bfffa9c4"
+            "uid": "xxxxxxxxxxxx"
           },
           {
             "uid": "api"
@@ -118,7 +118,7 @@
           "measurement": "metrics",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT count(\"co2\") FROM \"metrics\" WHERE (\"mac\" = '\"3c71bfffa9c4\"' AND \"present\" = '\"1\"') AND $timeFilter GROUP BY time($__interval) fill(linear)",
+          "query": "SELECT count(\"co2\") FROM \"metrics\" WHERE (\"mac\" = '\"xxxxxxxxxxxx\"' AND \"present\" = '\"1\"') AND $timeFilter GROUP BY time($__interval) fill(linear)",
           "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
@@ -140,7 +140,7 @@
             {
               "key": "mac",
               "operator": "=",
-              "value": "3c71bfffa9c4"
+              "value": "xxxxxxxxxxxx"
             },
             {
               "condition": "AND",
@@ -190,7 +190,7 @@
             {
               "key": "mac",
               "operator": "=",
-              "value": "3c71bfffa9c4"
+              "value": "xxxxxxxxxxxx"
             },
             {
               "condition": "AND",
@@ -213,7 +213,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Device 3c71bfffa9c4",
+      "title": "Device xxxxxxxxxxxx",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -292,8 +292,8 @@
     ]
   },
   "timezone": "",
-  "title": "3c71bfffa9c4",
-  "uid": "3c71bfffa9c4",
+  "title": "xxxxxxxxxxxx",
+  "uid": "xxxxxxxxxxxx",
 <<<<<<< HEAD
   "version": 5
 }
