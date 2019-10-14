@@ -48,12 +48,12 @@
         "for": "0m",
         "frequency": "1m",
         "handler": 1,
-        "message": "xxxxxxxxxxxx",
+        "message": "3c71bfffa9c4",
         "name": "api",
         "noDataState": "keep_state",
         "notifications": [
           {
-            "uid": "xxxxxxxxxxxx"
+            "uid": "3c71bfffa9c4"
           },
           {
             "uid": "api"
@@ -118,7 +118,7 @@
           "measurement": "metrics",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT count(\"co2\") FROM \"metrics\" WHERE (\"mac\" = '\"xxxxxxxxxxxx\"' AND \"present\" = '\"1\"') AND $timeFilter GROUP BY time($__interval) fill(linear)",
+          "query": "SELECT count(\"co2\") FROM \"metrics\" WHERE (\"mac\" = '\"3c71bfffa9c4\"' AND \"present\" = '\"1\"') AND $timeFilter GROUP BY time($__interval) fill(linear)",
           "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
@@ -140,7 +140,7 @@
             {
               "key": "mac",
               "operator": "=",
-              "value": "xxxxxxxxxxxx"
+              "value": "3c71bfffa9c4"
             },
             {
               "condition": "AND",
@@ -190,7 +190,7 @@
             {
               "key": "mac",
               "operator": "=",
-              "value": "xxxxxxxxxxxx"
+              "value": "3c71bfffa9c4"
             },
             {
               "condition": "AND",
@@ -213,7 +213,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Device xxxxxxxxxxxx",
+      "title": "Device 3c71bfffa9c4",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -259,11 +259,7 @@
     "list": []
   },
   "time": {
-<<<<<<< HEAD
-    "from": "now-15m",
-=======
     "from": "now-30m",
->>>>>>> 1fe3f6b0c319209c8ff7f30a3dbf60c5a5e89768
     "to": "now"
   },
   "timepicker": {
@@ -292,12 +288,7 @@
     ]
   },
   "timezone": "",
-  "title": "xxxxxxxxxxxx",
-  "uid": "xxxxxxxxxxxx",
-<<<<<<< HEAD
-  "version": 5
-}
-=======
+  "title": "3c71bfffa9c4",
+  "uid": "3c71bfffa9c4",
   "version": 1
 }
->>>>>>> 1fe3f6b0c319209c8ff7f30a3dbf60c5a5e89768
