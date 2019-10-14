@@ -5,11 +5,11 @@ notifiers:
     org_id: 1
     is_default: false
     send_reminder: false
-    frequency: 5s
+    frequency: 10s
     disable_resolve_message: false
     settings:
       uploadImage: false
       access: proxy
-      url: 'http://web/api/v1/alerts'
+      url: 'http://web:3000/api/v1/alert'
       username: ''
       password: ''
