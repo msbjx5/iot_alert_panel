@@ -259,7 +259,11 @@
     "list": []
   },
   "time": {
+<<<<<<< HEAD
     "from": "now-15m",
+=======
+    "from": "now-30m",
+>>>>>>> 1fe3f6b0c319209c8ff7f30a3dbf60c5a5e89768
     "to": "now"
   },
   "timepicker": {
@@ -290,5 +294,10 @@
   "timezone": "",
   "title": "3c71bfffa9c4",
   "uid": "3c71bfffa9c4",
+<<<<<<< HEAD
   "version": 5
 }
+=======
+  "version": 1
+}
+>>>>>>> 1fe3f6b0c319209c8ff7f30a3dbf60c5a5e89768
